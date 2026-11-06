@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractions</title>
+
+    <!-- TO FIX BRIEF WHITE FLASH WHEN DARK MODE IS TURNED ON -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <!-- CONNECTING POPPINS FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- LINKING CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER AND NAV BAR -->
+    <header class="header">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <div class="logo">Abode of Peace</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="discover.html">Discover Brunei</a>
+                <ul class="dropdown-menu">
+                    <li><a href="districts.html">Explore By District</a></li>
+                </ul></li>
+                <li><a href="attractions.html" class="active">Attractions</a></li>
+                <li><a href="plan.html">Plan Your Visit</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="theme-btn" id="themeToggleBtn" aria-label="Toggle Light Dark Theme">🌙</button>
+        </nav>
+    </header>
+    
+    <!-- MAIN -->
+    <main class="container">
+
+        <!-- TOP SECTION -->
+        <section class="page-header-box">
+            <h1>Top Destinations</h1>
+            <p>Let's Explore Your Dream Destination Here!</p>
+        </section>
+
+        <!-- BUTTONS -->
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">🌟 All Attractions</button>
+            <button class="filter-btn" data-filter="culture">🕌 Culture & Heritage</button>
+            <button class="filter-btn" data-filter="adventure">🎢 Family & Adventure</button>
+            <button class="filter-btn" data-filter="museums">🏛️ History & Museums</button>
+        </div>
+
+        <!-- GRIDS -->
+        <div class="attractions-grid">
+
+            <!-- SOAS -->
+            <div class="attraction-card" data-category="culture">
+                <img src="images/soas-06.jpg" alt="Omar Ali Saifuddien Mosque" class="attraction-img">
+                <div class="attraction-content">
+                    <div class="attraction-header-row">
+                        <h3>Omar Ali Saifuddien Mosque</h3>
+                        <span class="attraction-badge">City Center</span>
+                    </div>
+                    <p class="attraction-desc"> Standing 52 meters tall, it was designed as the tallest building in central Bandar Seri Begawan; 
+                    local lore notes that nearby commercial buildings were restricted from exceeding its height.</p>
+                </div>
+            </div>
+
+            <!-- JERUDONG PARK -->
+            <div class="attraction-card" data-category="adventure">
+                <img src="images/jp.jpg" alt="Jerudong Park Playground" class="attraction-img">
+                <div class="attraction-content">
+                    <div class="attraction-header-row">
+                        <h3>Jerudong Park</h3>
+                        <span class="attraction-badge">Brunei-Muara</span>
+                    </div>
+                    <p class="attraction-desc">Jerudong Park is an amusement park in Jerudong, Brunei-Muara District, Brunei. 
+                        It is the largest and most expensive amusement park in Southeast Asia, built and funded by the Brunei Government for $500 billion.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ENERGY HUB -->
+            <div class="attraction-card" data-category="museums">
+                <img src="images/energy-hub.jpg" alt="Brunei Energy Hub Dermaga Diraja" class="attraction-img">
+                <div class="attraction-content">
+                    <div class="attraction-header-row">
+                        <h3>Brunei Energy Hub Dermaga Diraja</h3>
+                        <span class="attraction-badge">City Center</span>
+                    </div>
+                    <p class="attraction-desc">Brunei Energy Hub Dermaga Diraja stands as a significant tribute to the country's history and serves as an interactive educational centre 
+                        for the public to learn about the importance of the energy industry to the local economy as well as everyday lives</p>
+                </div>
+            </div>
+
+            <!-- KAMPONG AYER -->
+            <div class="attraction-card" data-category="culture">
+                <img src="images/kampong-ayer-top-image.jpg" alt="Kampong Ayer" class="attraction-img">
+                <div class="attraction-content">
+                    <div class="attraction-header-row">
+                        <h3>Kampong Ayer</h3>
+                        <span class="attraction-badge">Kampong Ayer</span>
+                    </div>
+                    <p class="attraction-desc">Kampong Ayer is the world's largest stilt settlement, located on the Brunei River in Bandar Seri Begawan, Brunei. 
+                        Often called the "Venice of the East," it has been inhabited for over 600 to 1,000 years.</p>
+                </div>
+            </div>
+
+            <!-- ULU TEMBURONG NATIONAL PARK -->
+            <div class="attraction-card" data-category="adventure">
+                <img src="images/temburong.jpg" alt="Ulu Temburong National Park" class="attraction-img">
+                <div class="attraction-content">
+                    <div class="attraction-header-row">
+                        <h3>Ulu Temburong National Park</h3>
+                        <span class="attraction-badge">Temburong</span>
+                    </div>
+                    <p class="attraction-desc">Ulu Temburong National Park is the first national park to be established in Brunei, protected since 1991. 
+                        The park is in Temburong District in eastern Brunei, and covers about 40% of the district in the south at 550 square kilometres.</p>
+                </div>
+            </div>
+
+            <!-- ROYAL REGALIA MUSEUM -->
+            <div class="attraction-card" data-category="museums">
+                <img src="images/BN-Brunei-Royal-Regalia-exterior.jpg" alt="Royal Regalia Museum" class="attraction-img">
+                <div class="attraction-content">
+                    <div class="attraction-header-row">
+                        <h3>Royal Regalia Museum</h3>
+                        <span class="attraction-badge">Bandar Seri Begawan</span>
+                    </div>
+                    <p class="attraction-desc">The Royal Regalia Museum in Bandar Seri Begawan, Brunei, 
+                        is a grand, golden-domed landmark dedicated to the history of the Bruneian monarchy and the reign of Sultan Hassanal Bolkiah.</p>
+                </div>
+            </div>
+
+        </div>
+        
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- TOP TITLE AND SUBSCRIBE FORM -->
+            <div class="footer-top">
+                <div class="footer-brand-message">
+                    <h3>Discover The Abode of Peace -<br>Plan Your Journey Today.</h3>
+                </div>
+                <div class="footer-newsletter">
+                    <p>Get In Touch!</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CONTACT INFO, EXPLORE, AND HELP SECTION -->
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>CONTACT INFORMATION</h4>
+                    <p>✉️ info@bruneitourism.gov.bn</p>
+                    <p>📞 +673 238 2822</p>
+                </div>
+                <div class="footer-col">
+                    <h4>EXPLORE</h4>
+                    <a href="discover.html">Discover Brunei</a>
+                    <a href="attractions.html">Attractions</a>
+                    <a href="plan.html">Plan Your Visit</a>
+                </div>
+                <div class="footer-col">
+                    <h4>HELP</h4>
+                    <a href="contact.html">Support</a>
+                </div>
+            </div>
+
+            <!-- COPYRIGHT BOTTOM SECTION -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ministry of Tourism, Brunei Darussalam. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms & Condition</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LINKING JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

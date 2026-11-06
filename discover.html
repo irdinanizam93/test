@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Brunei</title>
+
+    <!-- TO FIX BRIEF WHITE FLASH WHEN DARK MODE IS TURNED ON -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <!-- CONNECTING POPPINS FONT FOR CSS USE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- LINKING CSS  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER AND NAV BAR -->
+    <header class="header">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <div class="logo">Abode of Peace</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="discover.html" class="active">Discover Brunei</a>
+                <ul class="dropdown-menu">
+                    <li><a href="districts.html" class="active">Explore By District</a></li>
+                </ul></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="plan.html">Plan Your Visit</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="theme-btn" id="themeToggleBtn" aria-label="Toggle Light Dark Theme">🌙</button>
+        </nav>
+    </header>
+    
+    <!-- MAIN -->
+    <main class="container">
+
+        <!-- TOP BANNER -->
+        <section class="top-banner">
+            <img src="images/taseklama-01.jpg" alt="Brunei Rainforest" class="top-banner-img">
+            
+            <div class="top-banner-text">
+                <h1>Discover The Unexpected</h1>
+                <p>Explore ancient rainforests, royal heritage, and peaceful water villages in Borneo.</p>
+                <a href="#featured" class="btn-explore">Explore Places &rarr;</a> <!-- NOTE: &RARR; FOR ARROW SYMBOL -->
+            </div>
+
+        </section>
+
+        <!-- EXPLORE DISTRICT SECTION -->
+        <section id="featured" class="content-section">
+            <div class="section-header-left">
+                <h2>Explore By District</h2>
+                <p>Each region offers a different side of Brunei's culture and nature.</p>
+            </div>
+
+            <div class="district-grid">
+
+                <!-- BRUNEI-MUARA -->
+                <a href="districts.html#brunei-muara" class="card-link">
+                <div class="district-card">
+                    <img src="images/pasarmalam.jpg" alt="Brunei-Muara" class="district-img">
+                    <div class="district-overlay"></div>
+                    <div class="district-info">
+                        <span class="district-tag">Capital & Culture</span>
+                        <h3>Brunei-Muara</h3>
+                        <p>Home to night markets and Kampong Ayer.</p>
+                    </div>
+                </div>
+                </a>
+
+                <!-- TEMBURONG -->
+                <a href="districts.html#temburong" class="card-link">
+                <div class="district-card">
+                    <img src="images/temburong.jpg" alt="Temburong" class="district-img">
+                    <div class="district-overlay"></div>
+                    <div class="district-info">
+                        <span class="district-tag">Eco-Adventure</span>
+                        <h3>Temburong</h3>
+                        <p>Pristine national parks, canopy walks, and river rafting.</p>
+                    </div>
+                </div>
+                </a>
+
+                <!-- TUTONG -->
+                <a href="districts.html#tutong" class="card-link">
+                <div class="district-card">
+                    <img src="images/tutong.jpg" alt="Tutong" class="district-img">
+                    <div class="district-overlay"></div>
+                    <div class="district-info">
+                        <span class="district-tag">Lakes & Beaches</span>
+                        <h3>Tutong</h3>
+                        <p>Famous for Tasek Merimbun lake and Seri Kenangan beach.</p>
+                    </div>
+                </div>
+                </a>
+
+                <!-- KUALA BELAIT -->
+                 <a href="districts.html#belait" class="card-link">
+                <div class="district-card">
+                    <img src="images/kb.jpg" alt="Belait" class="district-img">
+                    <div class="district-overlay"></div>
+                    <div class="district-info">
+                        <span class="district-tag">Energy & Wildlife</span>
+                        <h3>Belait</h3>
+                        <p>Oil & gas history, forest reserves, and tranquil parks.</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- TOP TITLE AND SUBSCRIBE FORM -->
+            <div class="footer-top">
+                <div class="footer-brand-message">
+                    <h3>Discover The Abode of Peace -<br>Plan Your Journey Today.</h3>
+                </div>
+                <div class="footer-newsletter">
+                    <p>Get In Touch!</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CONTACT INFO, EXPLORE, AND HELP SECTION -->
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>CONTACT INFORMATION</h4>
+                    <p>✉️ info@bruneitourism.gov.bn</p>
+                    <p>📞 +673 238 2822</p>
+                </div>
+                <div class="footer-col">
+                    <h4>EXPLORE</h4>
+                    <a href="discover.html">Discover Brunei</a>
+                    <a href="attractions.html">Attractions</a>
+                    <a href="plan.html">Plan Your Visit</a>
+                </div>
+                <div class="footer-col">
+                    <h4>HELP</h4>
+                    <a href="contact.html">Support</a>
+                </div>
+            </div>
+
+            <!-- COPYRIGHT BOTTOM SECTION -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ministry of Tourism, Brunei Darussalam. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms & Condition</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- LINKING JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

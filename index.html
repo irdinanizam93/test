@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brunei Tourism</title>
+
+    <!-- TO FIX BRIEF WHITE FLASH WHEN DARK MODE IS TURNED ON -->
+      <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+    <!-- CONNECTING POPPINS FONT FOR CSS USE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- LINKING CSS  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER AND NAV BAR -->
+    <header class="header">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <div class="logo">Abode of Peace</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="discover.html">Discover Brunei</a>
+                <ul class="dropdown-menu">
+                    <li><a href="districts.html">Explore By District</a></li>
+                </ul></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="plan.html">Plan Your Visit</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="theme-btn" id="themeToggleBtn" aria-label="Toggle Light Dark Theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container">
+        <section class="welcome">
+            <img src="images/brunei-homepage.jpg" alt="View of Mosque" class="banner-img">
+            <div class="banner">
+                <h1>Welcome to Brunei Darussalam</h1>
+                <p>Discover the Abode of Peace</p>
+            </div>
+        </section>
+
+        <!-- WHY VISIT SECTION -->
+        <section class="why-visit">
+            <h2>Why Visit Brunei?</h2>
+            <div class="grid">
+                <article class="card">
+                    <div class="card-icon">🕌</div>
+                    <h3>Architecural and Cultural Landmarks</h3>
+                    <p>Experience grand architecture and deep-rooted traditions in the heart of Southeast Asia.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">🌿</div>
+                    <h3>Pristine Nature</h3>
+                    <p>Journey into the heart of Borneo and spot diverse wildlife.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">🫱🏼‍🫲🏽</div>
+                    <h3>Warm Hospitality</h3>
+                    <p>Enjoy peaceful surroundings and welcoming local hospitality.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- THREE RESOURCE LINKS SECTION -->
+        <section class="resources-section">
+            <div class="resources-header">
+                <div>
+                    <h2>Official Resources</h2>
+                    <p>Verified portals to help you plan your journey safely and officially.</p>
+                </div>
+            </div>
+
+            <div class="resources-grid">
+                <!-- 1. BRUNEI TOURISM LINK -->
+                <a href="https://www.bruneitourism.com/" class="resource-card">
+                    <img src="images/Brunei-Muara-hero-banner.jpg" alt="Brunei Tourism Portal" class="resource-bg">
+                    <div class="resource-overlay"></div>
+                    <div class="resource-content">
+                        <span class="resource-badge">Official Portal</span>
+                        <div class="bottom-text">
+                            <h3>Brunei Tourism</h3>
+                            <p class="resource-location">📍 Bandar Seri Begawan</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- 2. TOURISM DEVELOPMENT DEPT. LINK -->
+                <a href="https://www.tourism.gov.bn/" class="resource-card">
+                    <img src="images/image1.jpeg" alt="Tourism Development Department" class="resource-bg">
+                    <div class="resource-overlay"></div>
+                    <div class="resource-content">
+                        <span class="resource-badge">Government</span>
+                        <div class="bottom-text">
+                            <h3>Tourism Development Department</h3>
+                            <p class="resource-location">📍 Ministry of Primary Resources</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 3. EXPLORE BRUNEI LINK -->
+                <a href="https://www.explorebrunei.gov.bn/" class="resource-card">
+                    <img src="images/canopy-top.jpg" alt="Explore Brunei" class="resource-bg">
+                    <div class="resource-overlay"></div>
+                    <div class="resource-content">
+                        <span class="resource-badge">Travel Guide</span>
+                        <div class="bottom-text">
+                            <h3>Explore Brunei</h3>
+                            <p class="resource-location">📍 Brunei Darussalam</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+   <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-container">
+
+                <!-- TOP TITLE AND SUBSCRIBE FORM -->
+                <div class="footer-top">
+                    <div class="footer-brand-message">
+                        <h3>Discover The Abode of Peace -<br>Plan Your Journey Today.</h3>
+                    </div>
+                    <div class="footer-newsletter">
+                        <p>Get In Touch!</p>
+                        <form class="newsletter-form" onsubmit="event.preventDefault();">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- CONTACT INFO, EXPLORE, AND HELP SECTION -->
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>CONTACT INFORMATION</h4>
+                        <p>✉️ info@bruneitourism.gov.bn</p>
+                        <p>📞 +673 238 2822</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>EXPLORE</h4>
+                        <a href="discover.html">Discover Brunei</a>
+                        <a href="attractions.html">Attractions</a>
+                        <a href="plan.html">Plan Your Visit</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>HELP</h4>
+                        <a href="contact.html">Support</a>
+                    </div>
+                </div>
+
+                <!-- COPYRIGHT BOTTOM SECTION -->
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Ministry of Tourism, Brunei Darussalam. All Rights Reserved.</p>
+                    <div class="footer-legal">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms & Condition</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <!-- LINKING JAVASCRIPT-->
+    <script src="script.js"></script>
+</body>
+</html>

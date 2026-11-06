@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <!-- TO FIX BRIEF WHITE FLASH WHEN DARK MODE IS TURNED ON -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <!-- CONNECTING POPPINS FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- LINKING CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER AND NAV BAR -->
+    <header class="header">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <div class="logo">Abode of Peace</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="discover.html">Discover Brunei</a>
+                <ul class="dropdown-menu">
+                    <li><a href="districts.html">Explore By District</a></li>
+                </ul></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="plan.html">Plan Your Visit</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+            <button class="theme-btn" id="themeToggleBtn" aria-label="Toggle Light Dark Theme">🌙</button>
+        </nav>
+    </header>
+    
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="container">
+        <section class="contact-wrapper">
+  
+  <div class="contact-info-card">
+    <h2>Contact Information</h2>
+    <p class="info-intro">
+      Have questions or need help planning your trip to Brunei? We are always ready to assist you with local recommendations and reliable support.
+    </p>
+
+    <!-- LEFT SIDE: CONTACT INFORMATION -->
+    <div class="info-list">
+      <!-- PHONE NUMBER -->
+      <div class="info-item">
+        <div class="info-icon">📱</div>
+        <div class="info-details">
+          <h3>Phone Number</h3>
+          <p>+673 223 4567</p>
+        </div>
+      </div>
+
+      <div class="info-divider"></div>
+      <!-- EMAIL -->
+      <div class="info-item">
+        <div class="info-icon">✉️</div>
+        <div class="info-details">
+          <h3>Email Address</h3>
+          <p>info@discoverbrunei.bn</p>
+        </div>
+      </div>
+
+      <div class="info-divider"></div>
+      <!-- OPENING HOURS -->
+      <div class="info-item">
+        <div class="info-icon">🕒</div>
+        <div class="info-details">
+          <h3>Opening Hours</h3>
+          <p>Mon - Sat: 8:00 AM - 5:00 PM</p>
+        </div>
+      </div>
+
+      <div class="info-divider"></div>
+      <!-- LOCATION -->
+      <div class="info-item">
+        <div class="info-icon">📍</div>
+        <div class="info-details">
+          <h3>Our Location</h3>
+          <p>Jalan Elizabeth II, Bandar Seri Begawan, Brunei</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE: CONTACT FORM -->
+  <div class="contact-form-card">
+    <div class="badge-pill">
+      <span>✳️</span> Get In Touch
+    </div>
+
+    <h2>Get In Touch</h2>
+    <p class="form-intro">
+      We would love to hear about your travel plans and help you experience Brunei. Fill out the form below and our team will get back to you shortly.
+    </p>
+
+    <!-- CONTACT FORM -->
+    <form id="contactForm" onsubmit="handleContactSubmit(event)">
+      <div class="form-grid">
+
+        <div class="form-group">
+          <input type="text" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="form-group">
+          <input type="tel" placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+          <select required>
+            <option value="" disabled selected>Topic / Inquiry Type</option>
+            <option value="itinerary">Itinerary Assistance</option>
+            <option value="tours">Tour Guidance</option>
+            <option value="accommodation">Accommodation Info</option>
+            <option value="general">General Question</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <textarea rows="5" placeholder="Message" required></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit">Send Message<span class="arrow-icon">↗</span></button>
+    </form>
+  </div>
+</section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- TOP TITLE AND SUBSCRIBE FORM -->
+            <div class="footer-top">
+                <div class="footer-brand-message">
+                    <h3>Discover The Abode of Peace -<br>Plan Your Journey Today.</h3>
+                </div>
+                <div class="footer-newsletter">
+                    <p>Get In Touch!</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CONTACT INFO, EXPLORE, AND HELP SECTION -->
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>CONTACT INFORMATION</h4>
+                    <p>✉️ info@bruneitourism.gov.bn</p>
+                    <p>📞 +673 238 2822</p>
+                </div>
+                <div class="footer-col">
+                    <h4>EXPLORE</h4>
+                    <a href="discover.html">Discover Brunei</a>
+                    <a href="attractions.html">Attractions</a>
+                    <a href="plan.html">Plan Your Visit</a>
+                </div>
+                <div class="footer-col">
+                    <h4>HELP</h4>
+                    <a href="contact.html">Support</a>
+                </div>
+            </div>
+
+            <!-- COPYRIGHT BOTTOM SECTION -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ministry of Tourism, Brunei Darussalam. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms & Condition</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- LINKING JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

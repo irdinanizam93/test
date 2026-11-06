@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore By District</title>
+
+    <!-- TO FIX BRIEF WHITE FLASH WHEN DARK MODE IS TURNED ON -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <!-- CONNECTING POPPINS FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- LINKING CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER AND NAV BAR -->
+    <header class="header">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <div class="logo">Abode of Peace</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="discover.html" class="active">Discover Brunei</a>
+                <ul class="dropdown-menu">
+                    <li><a href="districts.html" class="active">Explore By District</a></li>
+                </ul></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="plan.html">Plan Your Visit</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="theme-btn" id="themeToggleBtn" aria-label="Toggle Light Dark Theme">🌙</button>
+        </nav>
+    </header>
+    
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="container">
+
+        <!-- TOP HEADER -->
+        <section class="page-header-box">
+            <h1>Explore By District</h1>
+            <p>Discover the unique culture, heritage, and nature across Brunei's four distinct regions.</p>
+        </section>
+
+       <!-- DISTRICT 1 BRUNEI-MUARA -->
+        <section class="content-section" id="brunei-muara">
+            <div class="district-section-header">
+                <h2>Brunei-Muara District</h2>
+                <p>The bustling heart of the nation, blending royal heritage with traditional water villages.</p>
+            </div>
+
+            <div class="grid">
+                <!-- SOAS -->
+                <div class="card">
+                    <img src="images/soas-06.jpg" alt="Omar Ali Saifuddien Mosque" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Heritage</span>
+                        <h3>Omar Ali Saifuddien Mosque</h3>
+                        <p>An architectural masterpiece dominating the capital's skyline with its pure gold dome.</p>
+                    </div>
+                </div>
+
+                <!-- JAME -->
+                <div class="card">
+                    <img src="images/jame.jpg" alt="Jame' Asr Hassanil Bolkiah Mosque" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Landmark</span>
+                        <h3>Jame' Asr Hassanil Bolkiah</h3>
+                        <p>Brunei's largest mosque, renowned for its majestic multi-tiered golden roofs.</p>
+                    </div>
+                </div>
+
+                <!-- KAMPONG AYER -->
+                <div class="card">
+                    <img src="images/kampong-ayer-top-image.jpg" alt="Kampong Ayer" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Culture</span>
+                        <h3>Kampong Ayer</h3>
+                        <p>The historic world's largest water village perched above the Brunei River.</p>
+                    </div>
+                </div>
+
+                <!-- ROYAL REGALIA -->
+                <div class="card">
+                    <img src="images/BN-Brunei-Royal-Regalia-exterior.jpg" alt="Royal Regalia Museum" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Museum</span>
+                        <h3>Royal Regalia Museum</h3>
+                        <p>Houses a vast collection of royal coronation artifacts and ceremonial chariots.</p>
+                    </div>
+                </div>
+
+                <!-- PASAR MALAM -->
+                <div class="card">
+                    <img src="images/pasarmalam.jpg" alt="Gadong Night Market" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Food & Nightlife</span>
+                        <h3>Gadong Night Market</h3>
+                        <p>The ultimate destination to sample local Bruneian delicacies and street food.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISTRICT 2 TEMBURONG -->
+            <section class="content-section" id="temburong">
+                <div class="district-section-header">
+                    <h2>Temburong District</h2>
+                    <p>Known as the green jewel of Brunei, offering pristine rainforests and eco-adventures.</p>
+                </div>
+
+                <div class="grid">
+                    <!-- ULU -->
+                    <div class="card">
+                        <img src="images/canopy-top.jpg" alt="Ulu Temburong National Park" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">Eco-adventure</span>
+                            <h3>Ulu Temburong National Park</h3>
+                            <p>Famous for its thrilling canopy walk tower that offers sweeping views above the misty rainforest.</p>
+                        </div>
+                    </div>
+
+                    <!-- BUKIT PATOI -->
+                    <div class="card">
+                        <img src="images/Labu_Taman_Rekreasi_Hutan_Bukit_Patoi-3.jpeg" alt="Bukit Patoi Recreational Park" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">Hiking</span>
+                            <h3>Bukit Patoi Recreational Park</h3>
+                            <p>A popular forest reserve featuring winding jungle trails leading to a summit rock shelter with panoramic views.</p>
+                        </div>
+                    </div>
+
+                    <!-- SUMBILING -->
+                    <div class="card">
+                        <img src="images/ecovillage.jpg" alt="Sumbiling Eco Village" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">Eco-stay</span>
+                            <h3>Sumbiling Eco Village</h3>
+                            <p>An immersive eco-village managed by the local Iban community, offering cultural immersion.</p>
+                        </div>
+                    </div>
+            </section>
+        
+
+        <!-- DISTRICT 3 TUTONG -->
+          <section class="content-section" id="tutong">
+            <div class="district-section-header">
+                <h2>Tutong District</h2>
+                <p>A district famous for its beautiful beautiful lakes and beaches.</p>
+            </div>
+
+            <div class="grid">
+                <!-- TASEK MERIMBUN -->
+                <div class="card">
+                    <img src="images/tasekmerimbun.jpg" alt="Tasek Merimbun" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Lake</span>
+                        <h3>Tasek Merimbun</h3>
+                        <p>Brunei's largest natural lake, surrounded by rainforests and 
+                            featuring a scenic wooden boardwalk winding out over the water.</p>
+                    </div>
+                </div>
+
+                <!-- PANTAI SERI KENANGAN -->
+                <div class="card">
+                    <img src="images/serikenangan.jpg" alt="Pantai Seri Kenangan" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Beach</span>
+                        <h3>Pantai Seri Kenangan</h3>
+                        <p>A stunning coastal spit where the blue waters of the South China Sea meet 
+                            the calm freshwater current of the Tutong River.</p>
+                    </div>
+                </div>
+
+                <!-- ECO PONIES -->
+                <div class="card">
+                    <img src="images/ecoponies.jpg" alt="Eco Ponies Garden" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Eco-tourism</span>
+                        <h3>Eco Ponies Garden</h3>
+                        <p>A community-driven organic farm and eco-stay in Kampung Lamunin, 
+                            promoting sustainable living and traditional crafts.</p>
+                    </div>
+                </div>
+
+                <!-- LAMIN WARISAN -->
+                <div class="card">
+                    <img src="images/Lamin-Warisan.png" alt="Lamin Warisan" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Culture</span>
+                        <h3>Lamin Warisan</h3>
+                        <p>A traditional Malay cultural gallery and homestay showcasing authentic Tutong heritage and indigenous artifacts.</p>
+                    </div>
+                </div>
+
+                <!-- TAMU TUTONG -->
+                <div class="card">
+                    <img src="images/tamu.jpg" alt="Tamu Tutong" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Market</span>
+                        <h3>Tamu Tutong</h3>
+                        <p>A bustling open-air local market where vendors sell fresh tropical fruits, traditional delicacies, local crafts, and traditional snacks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- DISTRICT 4 BELAIT -->
+        <section class="content-section" id="belait">
+            <div class="district-section-header">
+                <h2>Belait District</h2>
+                <p>The industrial center of Brunei's oil and gas industry.</p>
+            </div>
+
+            <div class="grid">
+                <!-- BILLIONTH -->
+                <div class="card">
+                    <img src="images/billionth.jpg" alt="Billionth Barrel Monument" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Landmark</span>
+                        <h3>Billionth Barrel Monument</h3>
+                        <p>An iconic monument in Seria commemorating the production of the billionth barrel of oil in Brunei's historic petroleum fields.</p>
+                    </div>
+                </div>
+
+                <!-- SERIA ENERGY HUB -->
+                <div class="card">
+                    <img src="images/Seria-Energy-Lab.jpg" alt="Seria Energy Lab" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Science & Tech</span>
+                        <h3>Seria Energy Lab</h3>
+                        <p>An interactive, family-friendly science and energy center showcasing Brunei's energy history and technology.</p>
+                    </div>
+                </div>
+
+                <!-- MUSEUM -->
+                <div class="card">
+                    <img src="images/museum.jpg" alt="Belait District Museum" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Heritage</span>
+                        <h3>Belait District Museum</h3>
+                        <p>A regional museum showcasing the rich cultural history and traditions, and economic evolution of the Belait District.</p>
+                    </div>
+                </div>
+
+                <!-- LUAGAN -->
+                <div class="card">
+                    <img src="images/luagan.jpg" alt="Luagan Lalak Recreation Park" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Nature</span>
+                        <h3>Luagan Lalak Recreation Park</h3>
+                        <p>A breathtaking freshwater swamp lake with extensive wooden walkways stretching across the water for peaceful nature viewing.</p>
+                    </div>
+                </div>
+
+                <!-- LONGHOUSE -->
+                <div class="card">
+                    <img src="images/longhouse.jpg" alt="Labi Longhouses" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">Culture</span>
+                        <h3>Labi Longhouses</h3>
+                        <p>Traditional communal wooden longhouses, offering a glimpse into native Iban lifestyle and heritage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- TOP TITLE AND SUBSCRIBE FORM -->
+            <div class="footer-top">
+                <div class="footer-brand-message">
+                    <h3>Discover The Abode of Peace -<br>Plan Your Journey Today.</h3>
+                </div>
+                <div class="footer-newsletter">
+                    <p>Get In Touch!</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CONTACT INFO, EXPLORE, AND HELP SECTION -->
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>CONTACT INFORMATION</h4>
+                    <p>✉️ info@bruneitourism.gov.bn</p>
+                    <p>📞 +673 238 2822</p>
+                </div>
+                <div class="footer-col">
+                    <h4>EXPLORE</h4>
+                    <a href="discover.html">Discover Brunei</a>
+                    <a href="attractions.html">Attractions</a>
+                    <a href="plan.html">Plan Your Visit</a>
+                </div>
+                <div class="footer-col">
+                    <h4>HELP</h4>
+                    <a href="contact.html">Support</a>
+                </div>
+            </div>
+
+            <!-- COPYRIGHT BOTTOM SECTION -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ministry of Tourism, Brunei Darussalam. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms & Condition</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
